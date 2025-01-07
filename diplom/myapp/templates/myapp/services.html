@@ -5,11 +5,12 @@
 {% block content %}
 <h2>Услуги</h2>
 <div class="services-list">
-    {% for service in services %}
+    {% for product in products %}
         <div class="service-card">
-            <h3>{{ service.name }}</h3>
-            <p>Цена: {{ service.price }} руб.</p>
-            <a class="order-button" href="{% url 'order_form' service.id %}">Заказать</a>
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+            <h3>{{ product.name }}</h3>
+            <p>Цена: {{ product.price }} руб.</p>
+            <a class="order-button" href="{% url 'order_form' product.id %}">Заказать</a>
         </div>
     {% endfor %}
 </div>

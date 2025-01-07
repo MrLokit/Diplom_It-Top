@@ -102,21 +102,24 @@ footer {
 
 
 
-/* Сервисы */
+/* Услуги */
 .services-list {
-    display: flex;
-    flex-wrap: wrap; /* позволяет элементам переноситься на новую строку */
-    gap: 20px; /* расстояние между карточками */
-    margin: 20px;
+    display: grid; /* Используем Grid для сетки */
+    grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
+    gap: 20px; /* Промежутки между карточками */
+    margin: 20px; /* Отступ вокруг списка услуг */
 }
 
 .service-card {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 15px;
-    width: calc(33.333% - 40px); /* 3 колонки */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s; /* анимация при наведении */
+    transition: transform 0.2s;
+    display: flex; /* Проводим флекс для настройки */
+    flex-direction: column; /* Выстраиваем элементы в колонку */
+    align-items: center; /* Центрируем элементы */
+    justify-content: center; /* Центрируем элементы */
 }
 
 .service-card:hover {
@@ -135,6 +138,27 @@ footer {
 
 .order-button:hover {
     background-color: #0056b3; /* чуть более темный цвет при наведении */
+}
+
+.product-image {
+    max-width: 100%; /* Ограничиваем ширину до 100% от родительского элемента */
+    height: auto; /* Сохраняем пропорции изображения */
+    display: block; /* Убираем лишние отступы */
+    margin: 0 auto; /* Центруем изображение */
+}
+
+
+
+/* Контактная информация */
+.contact-container {
+    display: flex;       /* Используем флекс-контейнер */
+}
+
+.contact-section {
+    flex: 1;            /* Каждая секция занимает равное пространство */
+    padding: 20px;      /* Отступы внутри секций */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Небольшая тень для секций */
+    background-color: #fff; /* Цвет фона, чтобы секция выглядела как заполненная */
 }
 
 
