@@ -1,0 +1,146 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+/* Шаблон */
+header {
+    text-align: center; /* Центрирование содержимого */
+    padding-bottom: 25px;
+    background-color: #e0e0e0; /* Установите здесь желаемый цвет фона */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column; /* Стекать элементы вертикально */
+    min-height: 100vh; /* Минимальная высота равна высоте окна просмотра */
+}
+
+.main-nav ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем поля у списка */
+    display: grid; /* Используем сетку для равного распределения */
+    grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
+    height: 60px; /* Увеличиваем высоту для кнопок */
+}
+
+.main-nav li {
+    height: 100%; /* Убедитесь, что каждый элемент списка занимает всю высоту */
+}
+
+.main-nav a {
+    display: flex; /* Флексбокс для центрирования текста */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #333; /* Цвет текста */
+    font-weight: bold; /* Полужирный текст */
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем границы */
+    height: 100%; /* Занимает 100% высоты родителя */
+    transition: background-color 0.3s ease; /* Плавный переход эффекта */
+    font-size: 20px; /* Увеличение размера шрифта */
+}
+
+.main-nav a:hover {
+    background-color: #333; /* Изменение фона при наведении */
+    color: white; /* Изменение цвета текста при наведении */
+}
+
+main {
+    flex: 1; /* Позволить основному содержимому занимать все доступное пространство */
+}
+
+footer {
+    background-color: #4169E1; /* Темно-синий цвет */
+    color: #ffffff; /* Белый цвет текста */
+    text-align: center; /* Текст по центру */
+    font-weight: bold; /* Жирный текст */
+    padding: 10px 0; /* Сделать футер толщиной (30 px высоты) */
+    font-size: 16px; /* Размер текста */
+    margin-bottom: 0; /* Прижать футер к низу страницы */
+}
+
+
+
+/* Главная */
+.example-nav {
+    display: flex; /* Используем Flexbox для размещения изображений в строку */
+    justify-content: center; /* Центруем изображения */
+    flex-wrap: wrap; /* Позволяет изображениями оборачиваться на следующую строку если места не хватает */
+    margin: 20px 0; /* Отступы вокруг навигации */
+}
+
+.example-nav ul {
+    display: flex; /* Убедитесь, что список также используется как flex-контейнер */
+    list-style: none; /* Убираем стандартные точки списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+.example-nav li {
+    margin: 10px; /* Отступ между изображениями */
+}
+
+.example-nav img {
+    max-width: 100%; /* Устанавливаем максимальную ширину для изображений */
+    max-height: 400px; /* Устанавливаем максимальную высоту для изображений */
+    object-fit: contain; /* Масштабируем изображение, сохраняя пропорции */
+    flex: 1 1 auto; /* Обеспечиваем, чтобы изображения загружались правильно в строке */
+}
+
+
+
+
+/* Сервисы */
+.services-list {
+    display: flex;
+    flex-wrap: wrap; /* позволяет элементам переноситься на новую строку */
+    gap: 20px; /* расстояние между карточками */
+    margin: 20px;
+}
+
+.service-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(33.333% - 40px); /* 3 колонки */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* анимация при наведении */
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* увеличивать карточку при наведении */
+}
+
+.order-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.order-button:hover {
+    background-color: #0056b3; /* чуть более темный цвет при наведении */
+}
+
+
+
+/* Разное */
+h2, h3 {
+    text-align: center;
+    margin: 40px 0;
+}

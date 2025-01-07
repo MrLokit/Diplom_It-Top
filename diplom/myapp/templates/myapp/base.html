@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Картины на заказ{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/styles.css' %}">
+    <script src="{% static 'myapp/js/scripts.js' %}"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{% url 'home' %}">Главная</a></li>
+                    <li><a href="{% url 'services' %}">Услуги</a></li>
+                    <li><a href="{% url 'contact' %}">Контактная информация</a></li>
+                </ul>
+            </nav>
+            <h1>Картины на заказ</h1>
+        </header>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            <p>©2025 Картины на заказ</p>
+        </footer>
+    </div>
+</body>
+</html>

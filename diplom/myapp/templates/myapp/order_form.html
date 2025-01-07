@@ -1,0 +1,23 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Оформление заказа{% endblock %}
+
+{% block content %}
+<h2>Оформление заказа</h2>
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="service_id" value="{{ service.id }}">
+
+    <label for="name">Ваше имя:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="contact">Контактные данные:</label>
+    <input type="text" id="contact" name="contact" required>
+
+    <label for="comments">Комментарий (необязательно):</label>
+    <textarea id="comments" name="comments"></textarea>
+
+    <button type="submit">Оформить заказ</button>
+</form>
+<h3>Оставьте нам ваш номер и имя, наши менеджеры свяжутся с вами для обсуждения деталей заказа(адрес, размеры, дата, и т.д.)</h3>
+{% endblock %}

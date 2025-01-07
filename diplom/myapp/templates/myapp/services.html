@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Наши услуги{% endblock %}
+
+{% block content %}
+<h2>Услуги</h2>
+<div class="services-list">
+    {% for service in services %}
+        <div class="service-card">
+            <h3>{{ service.name }}</h3>
+            <p>Цена: {{ service.price }} руб.</p>
+            <a class="order-button" href="{% url 'order_form' service.id %}">Заказать</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
