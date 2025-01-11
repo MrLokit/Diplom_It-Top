@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: Arial;
 }
 
 body {
@@ -101,7 +102,6 @@ footer {
 
 
 
-
 /* Услуги */
 .services-list {
     display: grid; /* Используем Grid для сетки */
@@ -146,6 +146,101 @@ footer {
     display: block; /* Убираем лишние отступы */
     margin: 0 auto; /* Центруем изображение */
 }
+
+
+
+/* Оформление заказа */
+#photo-container {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Скрывать части изображения, выходящие за рамки контейнера */
+}
+
+#user-photo {
+    max-width: 100%;
+    max-height: 100%;
+    display: none; /* Скрыть, пока не загружено изображение */
+    object-fit: cover; /* Обрезать изображение по размеру контейнера */
+}
+
+.myapp-form {
+    margin: 20px; /* Отступы для всей формы */
+}
+
+/* Стили для контейнера с фотографией */
+#myapp-photo-container {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black; /* Черный бортик */
+    display: flex; /* Используем флексбокс */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+}
+
+/* Стили для img с фотографией */
+img#myapp-user-photo {
+    max-width: 100%;
+    max-height: 100%;
+    display: none; /* Скрываем изображение по умолчанию */
+}
+
+/* Стили для контейнеров с полями ввода */
+.myapp-form-container {
+    display: flex; /* Используем флексбокс для размещения элементов */
+}
+
+/* Стили для первого блока (фотография) */
+.myapp-photo-block {
+    flex: 1; /* Занимает одну часть доступного пространства */
+}
+
+/* Стили для второго блока (поле ввода) */
+.myapp-input-block {
+    flex: 2; /* Занимает две части доступного пространства */
+    margin-left: 20px; /* Отступ слева */
+}
+
+/* Стили для полей ввода */
+input[type="text"].myapp-input,
+input[type="tel"].myapp-input,
+
+.myapp-input {
+    width: 100%; /* Ширина на 100% родительского элемента */
+    padding: 8px; /* Внутренние отступы */
+    margin-top: 5px; /* Отступ сверху */
+    margin-bottom: 20px; /* Отступ снизу */
+    border: 1px solid #ccc; /* Граница для полей */
+    border-radius: 4px; /* Сглаженные углы */
+    font-size: 16px; /* Размер шрифта */
+}
+
+textarea.myapp-input {
+    width: 100%; /* Ширина на 100% родительского элемента */
+    padding: 8px; /* Внутренние отступы */
+    margin-top: 5px; /* Отступ сверху */
+    margin-bottom: 20px; /* Отступ снизу */
+    border: 1px solid #ccc; /* Граница для полей */
+    border-radius: 4px; /* Сглаженные углы */
+}
+
+/* Стили для кнопки */
+.myapp-button {
+    padding: 10px 15px; /* Отступы внутри кнопки */
+    background-color: #28a745; /* Зеленый фон для кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Сглаженные углы */
+    cursor: pointer; /* Курсор в виде указателя */
+}
+
+.myapp-button:hover {
+    background-color: #218838; /* Темнее при наведении */
+}
+
 
 
 

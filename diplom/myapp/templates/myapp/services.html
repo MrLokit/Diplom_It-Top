@@ -10,7 +10,7 @@
             <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
             <h3>{{ product.name }}</h3>
             <p>Цена: {{ product.price }} руб.</p>
-            <a class="order-button" href="{% url 'order_form' product.id %}">Заказать</a>
+            <a class="order-button" href="{% url 'order_view' product.id %}">Заказать</a>
         </div>
     {% endfor %}
 </div>
