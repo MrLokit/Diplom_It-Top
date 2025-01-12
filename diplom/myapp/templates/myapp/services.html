@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Наши услуги{% endblock %}
+
+{% block content %}
+<h2>Услуги</h2>
+<div class="services-list">
+    {% if products %}
+        {% for product in products %}
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                </div>
+                <h3 class="centered">{{ product.name }}</h3>
+                <p class="centered">{{ product.description }}</p>
+                <p class="centered">{{ product.price|floatformat:0 }} руб.</p>
+                <a class="order-button" href="{% url 'order_view' product.id %}">Заказать</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>В данный момент нет доступных услуг.</p>
+    {% endif %}
+</div>
+{% endblock %}
