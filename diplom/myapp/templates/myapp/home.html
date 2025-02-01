@@ -1,0 +1,19 @@
+{% extends 'myapp/base.html' %}
+
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<h2>Главная</h2>
+<h3>Тут вы сможете заказать картину по нашим шаблонам, прикрепив свою фотографию. Для начала перейдите в "Услуги"</h3>
+<h3>Примеры наших работ ниже</h3>
+<nav class="example-nav">
+    <ul>
+        <li><img src="{% static 'myapp/img/example1.jpg' %}" alt="Пример 1"></li>
+        <li><img src="{% static 'myapp/img/example2.jpg' %}" alt="Пример 2"></li>
+        <li><img src="{% static 'myapp/img/example3.jpg' %}" alt="Пример 3"></li>
+    </ul>
+</nav>
+
+{% endblock %}
